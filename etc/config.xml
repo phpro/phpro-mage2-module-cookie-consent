@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <phpro_cookie_consent>
+            <general>
+                <enabled>0</enabled>
+                <cookie_name_preferences>cookieConsentPrefs</cookie_name_preferences>
+                <cookie_expiration>182</cookie_expiration>
+            </general>
+        </phpro_cookie_consent>
+    </default>
+</config>

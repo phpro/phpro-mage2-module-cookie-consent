@@ -1,0 +1,55 @@
+{
+    "name": "phpro/mage2-module-cookie-consent",
+    "description": "Manage and set the categories and list of cookies",
+    "type": "magento2-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PHPro NV",
+            "email": "info@phpro.be",
+            "homepage": "https://www.phpro.be/"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "magento/framework": "^102.0|^103.0"
+    },
+    "require-dev": {
+        "magento/magento-coding-standard": "^4.0",
+        "phpro/grumphp-shim": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phpro\\CookieConsent\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "([ $COMPOSER_DEV_MODE -eq 0 ] || vendor/bin/phpcs --config-set installed_paths ../../magento/magento-coding-standard/)"
+        ],
+        "post-update-cmd": [
+            "([ $COMPOSER_DEV_MODE -eq 0 ] || vendor/bin/phpcs --config-set installed_paths ../../magento/magento-coding-standard/)"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "ext-gd": "7.1",
+            "ext-xsl": "7.1",
+            "ext-bcmath": "7.1",
+            "ext-pdo_mysql": "7.1",
+            "ext-soap": "7.1",
+            "ext-zip": "7.1",
+            "ext-intl": "7.1"
+        }
+    }
+}

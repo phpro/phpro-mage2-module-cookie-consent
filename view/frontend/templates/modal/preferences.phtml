@@ -1,0 +1,60 @@
+<?php
+/** @var \PHPro\CookieConsent\ViewModel\Cookie $viewModel */
+$viewModel = $block->getViewModel();
+$cookieGroups = $viewModel->getCookieGroups();
+?>
+<div id="modal-consent-content" style="display: none">
+    <div class="phpro-cookie-consent-modal">
+        <div class="consent-tabs">
+            <div id="cookie-policy" class="consent-tab cookie-policy">
+                <span><?= __('Cookie Policy') ?></span>
+            </div>
+            <?php  foreach ($cookieGroups as $cookieGroup ) : ?>
+                <?php if ($cookieGroup->isActive()): ?>
+                    <div id="<?= $cookieGroup->getSystemName() ?>" class="consent-tab <?= $cookieGroup->getSystemName() ?>">
+                        <span><?= $cookieGroup->getName() ?></span>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <div id="privacy-policy" class="consent-tab privacy-policy">
+                <span><?= __('Privacy Policy') ?></span>
+            </div>
+        </div>
+        <div class="consent-tabs-content">
+            <div class="consent-tab-content cookie-policy">
+                <h1><?= __('Cookie Policy') ?></h1>
+                <?= $this->getLayout()->createBlock(\Magento\Cms\Block\Block::class)->setBlockId($viewModel->getCookiePolicyIdentifier())->toHtml();?>
+            </div>
+            <?php  foreach ($cookieGroups as $cookieGroup ) : ?>
+                <?php if ($cookieGroup->isActive()): ?>
+                    <div class="consent-tab-content <?= $cookieGroup->getSystemName() ?>">
+                        <h1><?= $cookieGroup->getName() ?></h1>
+                        <p><?= $cookieGroup->getDescription() ?></p>
+                        <div class="cookie-toggle-wrapper">
+                            <label class="cookie-toggle">
+                                <input type="checkbox" <?php if ($cookieGroup->isEssential()): ?>checked disabled<?php endif; ?>>
+                                <span class="cookie-toggle-slider<?php if ($cookieGroup->isEssential()): ?> disabled<?php endif; ?>"></span>
+                            </label>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <div class="consent-tab-content privacy-policy">
+                <h1><?= __('Privacy Policy') ?></h1>
+                <?= $this->getLayout()->createBlock(\Magento\Cms\Block\Block::class)->setBlockId($viewModel->getPrivacyPolicyIdentifier())->toHtml();?>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "PHPro_CookieConsent/js/modal/preferences": {
+            "cookie_name": "<?= $viewModel->getCookieName(); ?>",
+            "expiration": <?= $viewModel->getExpirationDays(); ?>,
+            "secure": <?= $viewModel->isFrontUrlSecure(); ?>,
+            "cookie_groups_data": <?= $viewModel->getGroupsData(); ?>
+        }
+    }
+}
+</script>

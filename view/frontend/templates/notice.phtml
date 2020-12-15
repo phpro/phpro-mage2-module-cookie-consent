@@ -1,0 +1,32 @@
+<?php
+/** @var \PHPro\CookieConsent\ViewModel\Cookie $viewModel */
+$viewModel = $block->getViewModel();
+?>
+<div class="phpro-cookie-notice" style="display: none;">
+    <div class="notice-wrapper">
+        <div class="notice__description">
+            <span><?= __('We use functional and analytical cookies to make our website better.') ?></span>
+            <span><?= __('Would you like to know more about our cookies? Click on "Cookie settings".') ?></span>
+        </div>
+        <div class="notice__actions">
+            <button class="action primary notice__btn notice__btn-accept">
+                <span><?= __('Accept cookies') ?></span>
+            </button>
+            <button class="action primary notice__btn notice__btn-settings">
+                <span><?= __('Cookie settings') ?></span>
+            </button>
+        </div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "PHPro_CookieConsent/js/notice": {
+            "cookie_name": "<?= $viewModel->getCookieName(); ?>",
+            "expiration": <?= $viewModel->getExpirationDays(); ?>,
+            "secure": <?= $viewModel->isFrontUrlSecure(); ?>,
+            "cookie_groups_data": <?= $viewModel->getGroupsData(); ?>
+        }
+    }
+}
+</script>

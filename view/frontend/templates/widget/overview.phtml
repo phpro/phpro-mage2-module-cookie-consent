@@ -1,0 +1,12 @@
+<?php
+/** @var \PHPro\CookieConsent\Block\Widget\Overview $block */
+$cookieGroups = $block->getCookieGroups();
+?>
+<div class="cookie-consent-overview">
+    <?php foreach ($cookieGroups as $cookieGroup): ?>
+        <h1><?= $cookieGroup->getName() ?></h1>
+        <div class="cookie-group-description">
+            <p><?= $cookieGroup->getDescription() ?></p>
+        </div>
+    <?php endforeach; ?>
+</div>

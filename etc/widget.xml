@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="phpro_cookie_consent_overview" class="PHPro\CookieConsent\Block\Widget\Overview">
+        <label translate="true">Cookie consent overview</label>
+        <description translate="true">Listing of cookie groups</description>
+    </widget>
+    <widget id="phpro_cookie_preferences_button" class="PHPro\CookieConsent\Block\Widget\Preferences\Button">
+        <label translate="true">Cookie preferences button</label>
+        <description translate="true">Button to open the cookie preferences modal</description>
+        <parameters>
+            <parameter name="preferences_button_type" xsi:type="select" required="true" visible="true" source_model="PHPro\CookieConsent\Model\Source\Widget\Button">
+                <label>Button/Link</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
