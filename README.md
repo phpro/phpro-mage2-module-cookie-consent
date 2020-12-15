@@ -5,8 +5,9 @@
 
 ![notice](./docs/assets/notice.png "Consent Notice Bar")
 
-With this module you can easily become GDPR compliant. Your customers can easily select their cookie preferences using the customizable popup.
-As a store-owner, you can now easily divide cookies into categories and have an easy overview of what cookies are in use by your store.
+With this module your store can become GDPR compliant in no time.
+As a store-owner, you can now divide cookies into categories and have a quick overview of what cookies are being used by your store.
+Your customers can select their cookie preferences from within a customizable popup.
 
 ## Key features
 * Customizable consent pop-up
