@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Helper;
+namespace Phpro\CookieConsent\Helper;
 
 use Magento\Backend\Model\UrlInterface;
 use Magento\Eav\Api\Data\AttributeInterface;
@@ -10,8 +10,8 @@ use Magento\Framework\Filesystem;
 use Magento\Framework\Stdlib\ArrayManager;
 use Magento\Framework\View\Asset\Repository;
 use Magento\Store\Model\Store;
-use PHPro\CookieConsent\Api\Data\EavModelInterface;
-use PHPro\CookieConsent\Model\Eav\ScopeOverriddenValue;
+use Phpro\CookieConsent\Api\Data\EavModelInterface;
+use Phpro\CookieConsent\Model\Eav\ScopeOverriddenValue;
 
 class UiComponentHelper
 {

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Block\Adminhtml\Store\Edit;
+namespace Phpro\CookieConsent\Block\Adminhtml\Store\Edit;
 
 use Magento\Backend\Block\Widget\Context;
 

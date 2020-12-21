@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Model\ResourceModel;
+namespace Phpro\CookieConsent\Model\ResourceModel;
 
-use PHPro\CookieConsent\Model\CookieGroup as CookieGroupModel;
+use Phpro\CookieConsent\Model\CookieGroup as CookieGroupModel;
 
 class CookieGroup extends AbstractResource
 {

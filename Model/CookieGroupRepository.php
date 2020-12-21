@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Model;
+namespace Phpro\CookieConsent\Model;
 
 use Exception;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
@@ -10,11 +10,11 @@ use Magento\Framework\Api\SearchResultsInterfaceFactory;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Exception\StateException;
-use PHPro\CookieConsent\Api\CookieGroupRepositoryInterface;
-use PHPro\CookieConsent\Api\Data\CookieGroupInterface;
-use PHPro\CookieConsent\Model\ResourceModel\CookieGroup as CookieGroupResourceModel;
-use PHPro\CookieConsent\Model\ResourceModel\CookieGroup\Collection;
-use PHPro\CookieConsent\Model\ResourceModel\CookieGroup\CollectionFactory;
+use Phpro\CookieConsent\Api\CookieGroupRepositoryInterface;
+use Phpro\CookieConsent\Api\Data\CookieGroupInterface;
+use Phpro\CookieConsent\Model\ResourceModel\CookieGroup as CookieGroupResourceModel;
+use Phpro\CookieConsent\Model\ResourceModel\CookieGroup\Collection;
+use Phpro\CookieConsent\Model\ResourceModel\CookieGroup\CollectionFactory;
 
 class CookieGroupRepository implements CookieGroupRepositoryInterface
 {

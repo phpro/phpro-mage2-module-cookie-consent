@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Helper;
+namespace Phpro\CookieConsent\Helper;
 
 use Magento\Eav\Api\AttributeGroupRepositoryInterface;
 use Magento\Eav\Api\AttributeRepositoryInterface;

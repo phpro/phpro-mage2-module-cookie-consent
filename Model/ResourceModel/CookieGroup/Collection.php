@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Model\ResourceModel\CookieGroup;
+namespace Phpro\CookieConsent\Model\ResourceModel\CookieGroup;
 
-use PHPro\CookieConsent\Model\CookieGroup as CookieGroupModel;
-use PHPro\CookieConsent\Model\ResourceModel\AbstractCollection;
-use PHPro\CookieConsent\Model\ResourceModel\CookieGroup as CookieGroupResourceModel;
+use Phpro\CookieConsent\Model\CookieGroup as CookieGroupModel;
+use Phpro\CookieConsent\Model\ResourceModel\AbstractCollection;
+use Phpro\CookieConsent\Model\ResourceModel\CookieGroup as CookieGroupResourceModel;
 
 class Collection extends AbstractCollection
 {

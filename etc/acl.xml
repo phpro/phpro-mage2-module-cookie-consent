@@ -5,10 +5,10 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="Magento_Customer::customer">
-                    <resource id="PHPro_CookieConsent::cookie_consent" title="Cookie Consent">
-                        <resource id="PHPro_CookieConsent::configuration" title="Configuration" translate="title" />
-                        <resource id="PHPro_CookieConsent::cookie_consent_cookie_groups" title="Cookie Groups"/>
-                        <resource id="PHPro_CookieConsent::cookie_consent_cookies" title="Cookie"/>
+                    <resource id="Phpro_CookieConsent::cookie_consent" title="Cookie Consent">
+                        <resource id="Phpro_CookieConsent::configuration" title="Configuration" translate="title" />
+                        <resource id="Phpro_CookieConsent::cookie_consent_cookie_groups" title="Cookie Groups"/>
+                        <resource id="Phpro_CookieConsent::cookie_consent_cookies" title="Cookie"/>
                     </resource>
                 </resource>
             </resource>

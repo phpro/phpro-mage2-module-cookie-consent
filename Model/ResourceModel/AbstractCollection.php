@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Model\ResourceModel;
+namespace Phpro\CookieConsent\Model\ResourceModel;
 
 use Magento\Eav\Model\Config;
 use Magento\Eav\Model\Entity\AbstractEntity;

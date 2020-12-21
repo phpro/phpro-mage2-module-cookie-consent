@@ -1,5 +1,5 @@
 <?php
-/** @var \PHPro\CookieConsent\ViewModel\Cookie $viewModel */
+/** @var \Phpro\CookieConsent\ViewModel\Cookie $viewModel */
 $viewModel = $block->getViewModel();
 ?>
 <div class="phpro-cookie-notice" style="display: none;">
@@ -21,7 +21,7 @@ $viewModel = $block->getViewModel();
 <script type="text/x-magento-init">
 {
     "*": {
-        "PHPro_CookieConsent/js/notice": {
+        "Phpro_CookieConsent/js/notice": {
             "cookie_name": "<?= $viewModel->getCookieName(); ?>",
             "expiration": <?= $viewModel->getExpirationDays(); ?>,
             "secure": <?= $viewModel->isFrontUrlSecure(); ?>,

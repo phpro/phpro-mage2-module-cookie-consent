@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Model\ResourceModel;
+namespace Phpro\CookieConsent\Model\ResourceModel;
 
 use Magento\Eav\Model\Entity\AbstractEntity;
 use Magento\Eav\Model\Entity\Attribute\UniqueValidationInterface;
@@ -8,7 +8,7 @@ use Magento\Eav\Model\Entity\Context;
 use Magento\Framework\DataObject;
 use Magento\Store\Model\Store;
 use Magento\Store\Model\StoreManagerInterface;
-use PHPro\CookieConsent\Model\CookieGroupFactory;
+use Phpro\CookieConsent\Model\CookieGroupFactory;
 
 abstract class AbstractResource extends AbstractEntity
 {

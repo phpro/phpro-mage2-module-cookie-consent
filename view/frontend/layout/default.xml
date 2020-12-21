@@ -4,20 +4,20 @@
         <referenceContainer name="before.body.end">
             <block class="Magento\Framework\View\Element\Template"
                    name="phpro_cookie_consent_notice"
-                   template="PHPro_CookieConsent::notice.phtml"
+                   template="Phpro_CookieConsent::notice.phtml"
                    ifconfig="phpro_cookie_consent/general/enabled"
                    after="-">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">PHPro\CookieConsent\ViewModel\Cookie</argument>
+                    <argument name="view_model" xsi:type="object">Phpro\CookieConsent\ViewModel\Cookie</argument>
                 </arguments>
             </block>
             <block class="Magento\Framework\View\Element\Template"
                    name="phpro_cookie_consent_modal"
-                   template="PHPro_CookieConsent::modal/preferences.phtml"
+                   template="Phpro_CookieConsent::modal/preferences.phtml"
                    ifconfig="phpro_cookie_consent/general/enabled"
                    before="phpro_cookie_consent_notice">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">PHPro\CookieConsent\ViewModel\Cookie</argument>
+                    <argument name="view_model" xsi:type="object">Phpro\CookieConsent\ViewModel\Cookie</argument>
                 </arguments>
             </block>
         </referenceContainer>

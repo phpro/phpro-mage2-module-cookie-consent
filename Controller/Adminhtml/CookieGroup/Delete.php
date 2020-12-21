@@ -1,16 +1,16 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Controller\Adminhtml\CookieGroup;
+namespace Phpro\CookieConsent\Controller\Adminhtml\CookieGroup;
 
 use Exception;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\Model\View\Result\Redirect;
-use PHPro\CookieConsent\Api\CookieGroupRepositoryInterface;
+use Phpro\CookieConsent\Api\CookieGroupRepositoryInterface;
 
 class Delete extends Action
 {
-    const ADMIN_RESOURCE = 'PHPro_CookieConsent::CookieGroup_delete';
+    const ADMIN_RESOURCE = 'Phpro_CookieConsent::CookieGroup_delete';
 
     /**
      * @var CookieGroupRepositoryInterface

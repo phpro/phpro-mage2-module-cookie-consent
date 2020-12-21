@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\ViewModel;
+namespace Phpro\CookieConsent\ViewModel;
 
 use Magento\Framework\Stdlib\CookieManagerInterface;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 use Magento\Store\Model\StoreManagerInterface;
-use PHPro\CookieConsent\Api\Data\CookieGroupInterface;
-use PHPro\CookieConsent\Config\CookieConsentConfig;
-use PHPro\CookieConsent\Model\ResourceModel\CookieGroup\CollectionFactory;
+use Phpro\CookieConsent\Api\Data\CookieGroupInterface;
+use Phpro\CookieConsent\Config\CookieConsentConfig;
+use Phpro\CookieConsent\Model\ResourceModel\CookieGroup\CollectionFactory;
 
 class Cookie implements ArgumentInterface
 {

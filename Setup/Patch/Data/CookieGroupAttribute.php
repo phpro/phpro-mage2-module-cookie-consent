@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Setup\Patch\Data;
+namespace Phpro\CookieConsent\Setup\Patch\Data;
 
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-use PHPro\CookieConsent\Setup\CookieGroupSetup;
-use PHPro\CookieConsent\Setup\CookieGroupSetupFactory;
+use Phpro\CookieConsent\Setup\CookieGroupSetup;
+use Phpro\CookieConsent\Setup\CookieGroupSetupFactory;
 
 class CookieGroupAttribute implements DataPatchInterface
 {

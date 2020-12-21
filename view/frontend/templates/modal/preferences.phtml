@@ -1,5 +1,5 @@
 <?php
-/** @var \PHPro\CookieConsent\ViewModel\Cookie $viewModel */
+/** @var \Phpro\CookieConsent\ViewModel\Cookie $viewModel */
 $viewModel = $block->getViewModel();
 $cookieGroups = $viewModel->getCookieGroups();
 ?>
@@ -49,7 +49,7 @@ $cookieGroups = $viewModel->getCookieGroups();
 <script type="text/x-magento-init">
 {
     "*": {
-        "PHPro_CookieConsent/js/modal/preferences": {
+        "Phpro_CookieConsent/js/modal/preferences": {
             "cookie_name": "<?= $viewModel->getCookieName(); ?>",
             "expiration": <?= $viewModel->getExpirationDays(); ?>,
             "secure": <?= $viewModel->isFrontUrlSecure(); ?>,

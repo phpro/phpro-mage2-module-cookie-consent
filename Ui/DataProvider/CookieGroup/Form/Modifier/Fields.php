@@ -1,17 +1,17 @@
 <?php
 declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Ui\DataProvider\CookieGroup\Form\Modifier;
+namespace Phpro\CookieConsent\Ui\DataProvider\CookieGroup\Form\Modifier;
 
 use Magento\Eav\Model\Entity\Attribute;
 use Magento\Framework\App\ResourceConnection;
 use Magento\Framework\Registry;
 use Magento\Framework\UrlInterface;
 use Magento\Ui\DataProvider\Modifier\ModifierInterface;
-use PHPro\CookieConsent\Helper\AttributesHelper;
-use PHPro\CookieConsent\Helper\UiComponentHelper;
-use PHPro\CookieConsent\Model\CookieGroup;
-use PHPro\CookieConsent\Model\CookieGroupFactory;
+use Phpro\CookieConsent\Helper\AttributesHelper;
+use Phpro\CookieConsent\Helper\UiComponentHelper;
+use Phpro\CookieConsent\Model\CookieGroup;
+use Phpro\CookieConsent\Model\CookieGroupFactory;
 
 /**
  * Class Fields

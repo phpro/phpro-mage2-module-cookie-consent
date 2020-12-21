@@ -2,16 +2,16 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <!-- Start Service Contracts -->
-    <preference for="PHPro\CookieConsent\Api\CookieGroupRepositoryInterface" type="PHPro\CookieConsent\Model\CookieGroupRepository"/>
-    <preference for="PHPro\CookieConsent\Api\Data\CookieGroupInterface" type="PHPro\CookieConsent\Model\CookieGroup"/>
+    <preference for="Phpro\CookieConsent\Api\CookieGroupRepositoryInterface" type="Phpro\CookieConsent\Model\CookieGroupRepository"/>
+    <preference for="Phpro\CookieConsent\Api\Data\CookieGroupInterface" type="Phpro\CookieConsent\Model\CookieGroup"/>
     <!-- End Service Contracts -->
 
     <!-- Start Virtual types -->
     <!-- virtual type for grid collection filled with cookie group models for use in ui component -->
-    <virtualType name="PHPro\CookieConsent\Model\ResourceModel\CookieGroup\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <virtualType name="Phpro\CookieConsent\Model\ResourceModel\CookieGroup\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">phpro_cc_cookie_group_entity</argument>
-            <argument name="resourceModel" xsi:type="string">PHPro\CookieConsent\Model\ResourceModel\CookieGroup\Collection</argument>
+            <argument name="resourceModel" xsi:type="string">Phpro\CookieConsent\Model\ResourceModel\CookieGroup\Collection</argument>
         </arguments>
     </virtualType>
     <!-- End Virtual types -->
@@ -20,7 +20,7 @@
     <type name="Magento\Framework\EntityManager\MetadataPool">
         <arguments>
             <argument name="metadata" xsi:type="array">
-                <item name="PHPro\CookieConsent\Api\Data\CookieGroupInterface" xsi:type="array">
+                <item name="Phpro\CookieConsent\Api\Data\CookieGroupInterface" xsi:type="array">
                     <item name="entityTableName" xsi:type="string">phpro_cc_cookie_group_entity</item>
                     <item name="eavEntityType" xsi:type="string">phpro_cc_cookie_group</item>
                     <item name="identifierField" xsi:type="string">entity_id</item>
@@ -28,7 +28,7 @@
             </argument>
         </arguments>
     </type>
-    <type name="PHPro\CookieConsent\Model\CookieGroupRepository">
+    <type name="Phpro\CookieConsent\Model\CookieGroupRepository">
         <arguments>
             <argument name="collectionProcessor" xsi:type="object">Magento\Eav\Model\Api\SearchCriteria\CollectionProcessor</argument>
         </arguments>
@@ -37,7 +37,7 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="phpro_cookie_consent_listing_data_source" xsi:type="string">PHPro\CookieConsent\Model\ResourceModel\CookieGroup\Grid\Collection</item>
+                <item name="phpro_cookie_consent_listing_data_source" xsi:type="string">Phpro\CookieConsent\Model\ResourceModel\CookieGroup\Grid\Collection</item>
             </argument>
         </arguments>
     </type>

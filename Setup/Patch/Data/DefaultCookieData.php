@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Setup\Patch\Data;
+namespace Phpro\CookieConsent\Setup\Patch\Data;
 
 use Magento\Cms\Api\BlockRepositoryInterface;
 use Magento\Cms\Api\PageRepositoryInterface;
@@ -8,9 +8,9 @@ use Magento\Cms\Model\BlockFactory;
 use Magento\Cms\Model\PageFactory;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Model\Store;
-use PHPro\CookieConsent\Api\CookieGroupRepositoryInterface;
-use PHPro\CookieConsent\Api\Data\CookieGroupInterface;
-use PHPro\CookieConsent\Model\CookieGroupFactory;
+use Phpro\CookieConsent\Api\CookieGroupRepositoryInterface;
+use Phpro\CookieConsent\Api\Data\CookieGroupInterface;
+use Phpro\CookieConsent\Model\CookieGroupFactory;
 
 class DefaultCookieData implements DataPatchInterface
 {
@@ -126,8 +126,8 @@ class DefaultCookieData implements DataPatchInterface
         $page->setTitle('Cookie Consent Overview');
         $page->setIdentifier('consent-overview');
         $page->setContentHeading('Cookie Consent Overview');
-        $page->setContent('<p>{{widget type="PHPro\CookieConsent\Block\Widget\Overview"}}</p>' . PHP_EOL .
-            '<p>{{widget type="PHPro\CookieConsent\Block\Widget\Preferences\Button" preferences_button_type="0"}}</p>');
+        $page->setContent('<p>{{widget type="Phpro\CookieConsent\Block\Widget\Overview"}}</p>' . PHP_EOL .
+            '<p>{{widget type="Phpro\CookieConsent\Block\Widget\Preferences\Button" preferences_button_type="0"}}</p>');
 
         $this->pageRepository->save($page);
     }

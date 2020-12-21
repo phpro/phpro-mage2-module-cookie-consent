@@ -1,15 +1,15 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Ui\DataProvider\CookieGroup\Form;
+namespace Phpro\CookieConsent\Ui\DataProvider\CookieGroup\Form;
 
 use Magento\Framework\App\RequestInterface;
 use Magento\Store\Model\Store;
 use Magento\Ui\DataProvider\AbstractDataProvider;
 use Magento\Ui\DataProvider\Modifier\ModifierInterface;
 use Magento\Ui\DataProvider\Modifier\PoolInterface;
-use PHPro\CookieConsent\Api\CookieGroupRepositoryInterface;
-use PHPro\CookieConsent\Api\Data\CookieGroupInterface;
-use PHPro\CookieConsent\Model\ResourceModel\CookieGroup\CollectionFactory;
+use Phpro\CookieConsent\Api\CookieGroupRepositoryInterface;
+use Phpro\CookieConsent\Api\Data\CookieGroupInterface;
+use Phpro\CookieConsent\Model\ResourceModel\CookieGroup\CollectionFactory;
 
 class DataProvider extends AbstractDataProvider
 {

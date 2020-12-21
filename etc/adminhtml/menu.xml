@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="PHPro_CookieConsent::cookie_consent" title="Cookie Consent" translate="title" module="PHPro_CookieConsent" sortOrder="50" parent="Magento_Customer::customer" resource="PHPro_CookieConsent::cookie_consent"/>
-        <add id="PHPro_CookieConsent::cookie_groups" title="Cookie Groups" module="PHPro_CookieConsent" sortOrder="10" parent="PHPro_CookieConsent::cookie_consent" resource="PHPro_CookieConsent::cookie_consent_cookie_groups" action="phpro_cookie_consent/cookiegroup/index"/>
+        <add id="Phpro_CookieConsent::cookie_consent" title="Cookie Consent" translate="title" module="Phpro_CookieConsent" sortOrder="50" parent="Magento_Customer::customer" resource="Phpro_CookieConsent::cookie_consent"/>
+        <add id="Phpro_CookieConsent::cookie_groups" title="Cookie Groups" module="Phpro_CookieConsent" sortOrder="10" parent="Phpro_CookieConsent::cookie_consent" resource="Phpro_CookieConsent::cookie_consent_cookie_groups" action="phpro_cookie_consent/cookiegroup/index"/>
     </menu>
 </config>

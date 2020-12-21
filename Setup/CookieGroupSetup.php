@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Setup;
+namespace Phpro\CookieConsent\Setup;
 
 use Magento\Eav\Setup\EavSetup;
-use PHPro\CookieConsent\Api\Data\CookieGroupInterface;
-use PHPro\CookieConsent\Model\CookieGroupAttribute;
-use PHPro\CookieConsent\Model\ResourceModel\CookieGroup as CookieGroupResourceModel;
+use Phpro\CookieConsent\Api\Data\CookieGroupInterface;
+use Phpro\CookieConsent\Model\CookieGroupAttribute;
+use Phpro\CookieConsent\Model\ResourceModel\CookieGroup as CookieGroupResourceModel;
 
 class CookieGroupSetup extends EavSetup
 {

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Controller\Adminhtml\CookieGroup;
+namespace Phpro\CookieConsent\Controller\Adminhtml\CookieGroup;
 
 use Exception;
 use Magento\Backend\App\Action;
@@ -9,14 +9,14 @@ use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Store\Model\Store;
 use Magento\Store\Model\StoreManagerInterface;
-use PHPro\CookieConsent\Api\CookieGroupRepositoryInterface;
-use PHPro\CookieConsent\Api\Data\CookieGroupInterface;
-use PHPro\CookieConsent\Model\CookieGroup;
-use PHPro\CookieConsent\Model\CookieGroupFactory;
+use Phpro\CookieConsent\Api\CookieGroupRepositoryInterface;
+use Phpro\CookieConsent\Api\Data\CookieGroupInterface;
+use Phpro\CookieConsent\Model\CookieGroup;
+use Phpro\CookieConsent\Model\CookieGroupFactory;
 
 class Save extends Action
 {
-    const ADMIN_RESOURCE = 'PHPro_CookieConsent::CookieGroup_save';
+    const ADMIN_RESOURCE = 'Phpro_CookieConsent::CookieGroup_save';
 
     /**
      * @var DataPersistorInterface
