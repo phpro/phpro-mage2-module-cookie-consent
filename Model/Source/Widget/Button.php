@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Model\Source\Widget;
+namespace Phpro\CookieConsent\Model\Source\Widget;
 
 use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 

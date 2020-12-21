@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Model;
+namespace Phpro\CookieConsent\Model;
 
 use Magento\Eav\Model\Attribute;
 

@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Model;
+namespace Phpro\CookieConsent\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use PHPro\CookieConsent\Api\Data\CookieGroupInterface;
-use PHPro\CookieConsent\Api\Data\EavModelInterface;
+use Phpro\CookieConsent\Api\Data\CookieGroupInterface;
+use Phpro\CookieConsent\Api\Data\EavModelInterface;
 
 class CookieGroup extends AbstractModel implements CookieGroupInterface, EavModelInterface
 {

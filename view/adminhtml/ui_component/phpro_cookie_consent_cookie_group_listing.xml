@@ -81,7 +81,7 @@
                 </item>
             </argument>
         </column>
-        <actionsColumn class="PHPro\CookieConsent\Ui\Component\Listing\Column\CookieGroupActions" name="actions">
+        <actionsColumn class="Phpro\CookieConsent\Ui\Component\Listing\Column\CookieGroupActions" name="actions">
             <argument name="data" xsi:type="array">
                 <item name="sortOrder" xsi:type="number">80</item>
                 <item name="config" xsi:type="array">

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Api\Data;
+namespace Phpro\CookieConsent\Api\Data;
 
 interface CookieGroupInterface
 {

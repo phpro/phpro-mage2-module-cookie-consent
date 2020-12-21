@@ -1,19 +1,19 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Controller\Adminhtml\CookieGroup;
+namespace Phpro\CookieConsent\Controller\Adminhtml\CookieGroup;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Registry;
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Store\Model\Store;
-use PHPro\CookieConsent\Api\CookieGroupRepositoryInterface;
-use PHPro\CookieConsent\Model\CookieGroup;
-use PHPro\CookieConsent\Model\CookieGroupFactory;
+use Phpro\CookieConsent\Api\CookieGroupRepositoryInterface;
+use Phpro\CookieConsent\Model\CookieGroup;
+use Phpro\CookieConsent\Model\CookieGroupFactory;
 
 class Edit extends Action
 {
-    const ADMIN_RESOURCE = 'PHPro_CookieConsent::CookieGroup_edit';
+    const ADMIN_RESOURCE = 'Phpro_CookieConsent::CookieGroup_edit';
 
     /**
      * @var PageFactory

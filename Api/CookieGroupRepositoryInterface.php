@@ -1,11 +1,11 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Api;
+namespace Phpro\CookieConsent\Api;
 
 use Exception;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Api\SearchResultsInterface;
-use PHPro\CookieConsent\Api\Data\CookieGroupInterface;
+use Phpro\CookieConsent\Api\Data\CookieGroupInterface;
 
 interface CookieGroupRepositoryInterface
 {

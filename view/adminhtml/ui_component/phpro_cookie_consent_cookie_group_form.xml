@@ -9,10 +9,10 @@
     </argument>
     <settings>
         <buttons>
-            <button class="PHPro\CookieConsent\Block\Adminhtml\Store\Edit\BackButton" name="back"/>
-            <button class="PHPro\CookieConsent\Block\Adminhtml\Store\Edit\DeleteButton" name="delete"/>
-            <button class="PHPro\CookieConsent\Block\Adminhtml\Store\Edit\SaveButton" name="save"/>
-            <button class="PHPro\CookieConsent\Block\Adminhtml\Store\Edit\SaveAndContinueButton"
+            <button class="Phpro\CookieConsent\Block\Adminhtml\Store\Edit\BackButton" name="back"/>
+            <button class="Phpro\CookieConsent\Block\Adminhtml\Store\Edit\DeleteButton" name="delete"/>
+            <button class="Phpro\CookieConsent\Block\Adminhtml\Store\Edit\SaveButton" name="save"/>
+            <button class="Phpro\CookieConsent\Block\Adminhtml\Store\Edit\SaveAndContinueButton"
                     name="save_and_continue"/>
         </buttons>
         <namespace>phpro_cookie_consent_cookie_group_form</namespace>
@@ -30,7 +30,7 @@
         <settings>
             <submitUrl path="*/*/save"/>
         </settings>
-        <dataProvider class="PHPro\CookieConsent\Ui\DataProvider\CookieGroup\Form\DataProvider" name="cookie_group_form_data_source">
+        <dataProvider class="Phpro\CookieConsent\Ui\DataProvider\CookieGroup\Form\DataProvider" name="cookie_group_form_data_source">
             <settings>
                 <requestFieldName>entity_id</requestFieldName>
                 <primaryFieldName>entity_id</primaryFieldName>

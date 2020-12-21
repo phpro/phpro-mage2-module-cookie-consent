@@ -1,6 +1,6 @@
 define([
     'jquery',
-    'PHPro_CookieConsent/js/model/cookie'
+    'Phpro_CookieConsent/js/model/cookie'
 ], function ($, cookie) {
     return function (options) {
         const consentContentElement = '#modal-consent-content';

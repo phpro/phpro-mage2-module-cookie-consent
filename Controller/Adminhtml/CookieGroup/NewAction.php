@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PHPro\CookieConsent\Controller\Adminhtml\CookieGroup;
+namespace Phpro\CookieConsent\Controller\Adminhtml\CookieGroup;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
