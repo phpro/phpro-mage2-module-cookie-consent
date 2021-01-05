@@ -2,6 +2,7 @@
 
 namespace Phpro\CookieConsent\Setup\Patch\Data;
 
+use Magento\Eav\Model\Config;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Phpro\CookieConsent\Setup\CookieGroupSetup;
@@ -19,12 +20,19 @@ class CookieGroupAttribute implements DataPatchInterface
      */
     private $cookieGroupSetupFactory;
 
+    /**
+     * @var Config
+     */
+    private $eavConfig;
+
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
-        CookieGroupSetupFactory $cookieGroupSetupFactory
+        CookieGroupSetupFactory $cookieGroupSetupFactory,
+        Config $eavConfig
     ) {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->cookieGroupSetupFactory = $cookieGroupSetupFactory;
+        $this->eavConfig = $eavConfig;
     }
 
     public static function getDependencies()
@@ -43,5 +51,6 @@ class CookieGroupAttribute implements DataPatchInterface
         $cookieGroupSetup = $this->cookieGroupSetupFactory->create(['setup' => $this->moduleDataSetup]);
 
         $cookieGroupSetup->installEntities();
+	$this->eavConfig->clear();
     }
 }
