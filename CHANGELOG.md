@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.0.3]
+* Replace H1 tags with H3 tags
+
 ## [2.0.2]
 * Fixes an issue when running setup:upgrade
 
