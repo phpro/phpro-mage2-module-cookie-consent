@@ -18,6 +18,8 @@ define([
             $.each(systemNames, function (index, value) {
                 var sysName = 'cg_' + value;
                 data[sysName] = 1;
+                var checkboxSelector = '.phpro-cookie-consent-modal .consent-tab-content.' + value + ' .cookie-toggle input';
+                $(checkboxSelector).prop('checked', data[sysName]);
             });
             data['expire'] = expiration;
             data['secure'] = secure;
