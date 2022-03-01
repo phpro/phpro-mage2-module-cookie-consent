@@ -22,13 +22,13 @@ $cookieGroups = $viewModel->getCookieGroups();
         </div>
         <div class="consent-tabs-content">
             <div class="consent-tab-content cookie-policy">
-                <h3><?= __('Cookie Policy') ?></h3>
+                <p class="title"><?= __('Cookie Policy') ?></p>
                 <?= $this->getLayout()->createBlock(\Magento\Cms\Block\Block::class)->setBlockId($viewModel->getCookiePolicyIdentifier())->toHtml();?>
             </div>
             <?php  foreach ($cookieGroups as $cookieGroup ) : ?>
                 <?php if ($cookieGroup->isActive()): ?>
                     <div class="consent-tab-content <?= $cookieGroup->getSystemName() ?>">
-                        <h3><?= $cookieGroup->getName() ?></h3>
+                        <p class="title"><?= $cookieGroup->getName() ?></p>
                         <p><?= $cookieGroup->getDescription() ?></p>
                         <div class="cookie-toggle-wrapper">
                             <label class="cookie-toggle">
@@ -40,7 +40,7 @@ $cookieGroups = $viewModel->getCookieGroups();
                 <?php endif; ?>
             <?php endforeach; ?>
             <div class="consent-tab-content privacy-policy">
-                <h3><?= __('Privacy Policy') ?></h3>
+                <p class="title"><?= __('Privacy Policy') ?></p>
                 <?= $this->getLayout()->createBlock(\Magento\Cms\Block\Block::class)->setBlockId($viewModel->getPrivacyPolicyIdentifier())->toHtml();?>
             </div>
         </div>

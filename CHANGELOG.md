@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.0.4]
+* Replace H3 tags with P tags
+
 ## [2.0.3]
 * Replace H1 tags with H3 tags
 
