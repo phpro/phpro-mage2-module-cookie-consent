@@ -1,6 +1,7 @@
 # Changelog
 
 ## [2.0.4]
+* Replace H3 tags with P tags
 * Update toggle slider status after visitors accept all cookies.
 
 ## [2.0.3]

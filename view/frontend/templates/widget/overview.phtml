@@ -4,7 +4,7 @@ $cookieGroups = $block->getCookieGroups();
 ?>
 <div class="cookie-consent-overview">
     <?php foreach ($cookieGroups as $cookieGroup): ?>
-        <h3><?= $cookieGroup->getName() ?></h3>
+        <p class="title"><?= $cookieGroup->getName() ?></p>
         <div class="cookie-group-description">
             <p><?= $cookieGroup->getDescription() ?></p>
         </div>
