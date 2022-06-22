@@ -57,7 +57,7 @@ define([
         function init() {
             var consent = cookie.getConsentCookieObject(options.cookie_name);
             onClickTab($('#cookie-policy'));
-            if (consent !== null) {
+            if (consent !== undefined) {
                 var values = Object.entries(JSON.parse(consent));
                 $.each(values, function (index, value) {
                     if ('cg_' === value[0].substring(0, 3)) {

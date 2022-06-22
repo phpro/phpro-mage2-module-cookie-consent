@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.1.0]
+* Support PHP 8
+
 ## [2.0.5]
 * Fixed typo in less variable
 
