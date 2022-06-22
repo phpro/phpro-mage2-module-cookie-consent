@@ -94,10 +94,6 @@ class DataProvider extends AbstractDataProvider
 
     private function isAttributeDisabled(string $attributeCode, CookieGroupInterface $default, CookieGroupInterface $current): bool
     {
-        if ($current->getData($attributeCode) === $default->getData($attributeCode)) {
-            return true;
-        }
-
-        return false;
+        return $current->getData($attributeCode) === $default->getData($attributeCode);
     }
 }

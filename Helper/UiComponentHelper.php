@@ -157,7 +157,7 @@ class UiComponentHelper
             return 'checkbox';
         }
 
-        if (strpos($elementType, 'wysiwyg') !== false) {
+        if (str_contains($elementType, 'wysiwyg')) {
             return 'wysiwyg';
         }
 
