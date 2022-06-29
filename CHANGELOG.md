@@ -1,7 +1,7 @@
 # Changelog
 
 ## [3.0.0]
-* Support PHP 8
+* Support PHP 8.1
 * Remove Support Lower Than Magento 2.4.4
 
 ## [2.0.5]
