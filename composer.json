@@ -11,12 +11,12 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^7.4|^8.1",
         "magento/framework": "^103.0"
     },
     "require-dev": {
-        "magento/magento-coding-standard": "^4.0",
-        "phpro/grumphp-shim": "^1.1"
+        "magento/magento-coding-standard": "*",
+        "phpro/grumphp-shim": "^1.5"
     },
     "autoload": {
         "psr-4": {
@@ -32,24 +32,18 @@
             "url": "https://repo.magento.com/"
         }
     ],
-    "scripts": {
-        "post-install-cmd": [
-            "([ $COMPOSER_DEV_MODE -eq 0 ] || vendor/bin/phpcs --config-set installed_paths ../../magento/magento-coding-standard/)"
-        ],
-        "post-update-cmd": [
-            "([ $COMPOSER_DEV_MODE -eq 0 ] || vendor/bin/phpcs --config-set installed_paths ../../magento/magento-coding-standard/)"
-        ]
-    },
     "config": {
         "sort-packages": true,
-        "platform": {
-            "ext-gd": "7.1",
-            "ext-xsl": "7.1",
-            "ext-bcmath": "7.1",
-            "ext-pdo_mysql": "7.1",
-            "ext-soap": "7.1",
-            "ext-zip": "7.1",
-            "ext-intl": "7.1"
+        "allow-plugins": {
+            "phpro/grumphp-shim": true
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "([ $COMPOSER_DEV_MODE -eq 0 ] || vendor/bin/phpcs --config-set installed_paths ../../magento/magento-coding-standard,../../phpcompatibility/php-compatibility/PHPCompatibility)"
+        ],
+        "post-update-cmd": [
+            "([ $COMPOSER_DEV_MODE -eq 0 ] || vendor/bin/phpcs --config-set installed_paths ../../magento/magento-coding-standard,../../phpcompatibility/php-compatibility/PHPCompatibility)"
+        ]
     }
 }

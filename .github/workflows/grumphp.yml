@@ -1,38 +1,32 @@
-
-on: [push]
+on: [ push, pull_request ]
 
 jobs:
   build:
     name: Checking coding standards
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        php-versions:
+          - "7.4"
+          - "8.1"
+        dependencies:
+          - "lowest"
+          - "highest"
     steps:
-      - uses: actions/checkout@v2
-      - name: Get Composer Cache Directory
-        id: composer-cache
-        run: |
-          echo "::set-output name=dir::$(composer config cache-files-dir)"
+      -   name: Checkout repo
+          uses: actions/checkout@v2
 
-      - name: Cache Composer Downloads
-        uses: actions/cache@v1
-        with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-composer-
+      -   name: Configure PHP
+          uses: shivammathur/setup-php@v2
+          with:
+            php-version: ${{ matrix.php-versions }}
+            tools: composer:v2
+            coverage: xdebug
+            extensions: bcmath, gd
 
-      - name: Cache PHP dependencies
-        uses: actions/cache@v1
-        with:
-          path: vendor
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
+      -   name: Install Composer dependencies
+          run: composer install
 
-      - uses: MilesChou/composer-action@master
-        with:
-          args: config "http-basic.repo.magento.com" ${{ secrets.MAGE_USER }} ${{ secrets.MAGE_PASS }}
-
-      - uses: MilesChou/composer-action@master
-        with:
-          args: install --prefer-dist
-
-
-      - run: ./vendor/bin/grumphp run
+      -   name: GrumPHP
+          run: ./vendor/bin/grumphp run
