@@ -35,7 +35,8 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "phpro/grumphp-shim": true
+            "phpro/grumphp-shim": true,
+            "magento/composer-dependency-version-audit-plugin": true
         }
     },
     "scripts": {
