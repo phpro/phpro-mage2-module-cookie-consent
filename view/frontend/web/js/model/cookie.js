@@ -1,6 +1,6 @@
 define([
     'jquery',
-    'jquery/jquery.cookie'
+    'js-cookie/js.cookie'
 ], function ($) {
     'use strict';
 
