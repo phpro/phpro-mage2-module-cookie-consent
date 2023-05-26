@@ -1,0 +1,263 @@
+& when (@critical) {
+    // critical
+
+    //
+    //  Common
+    //  _____________________________________________
+    //
+    //  Notice bar
+    //  ---------------------------------------------
+    .phpro-cookie-notice {
+        width: 100vw;
+        padding: 30px;
+        background: @gray-50;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 900;
+
+        .notice-wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: @container__max-width;
+            margin: auto;
+            justify-content: space-around;
+            align-items: center;
+
+            .notice__description {
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+& when not (@critical) {
+    // non critical
+
+    //
+    //  Preferences popup
+    //  ---------------------------------------------
+    .modals-wrapper {
+        .modal-popup.cookie-consent-newsletter-modal {
+            .modal-inner-wrap {
+                background-color: @gray-50;
+
+                .modal-header {
+                    height: 0;
+                    padding: 0;
+
+                    .action-close:before {
+                        color: @black;
+                    }
+                }
+
+                .modal-content {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                .phpro-cookie-consent-modal {
+                    display: flex;
+                    flex-direction: column;
+
+                    .consent-tabs {
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 100%;
+
+                        .consent-tab {
+                            background-color: @gray-50;
+                            width: 100%;
+                            cursor: pointer;
+                            padding: 5px 5px 5px 20px;
+                            box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+                            position: relative;
+                            z-index: 10;
+
+                            &.active {
+                                background-color: var(--doulton-primary);
+                            }
+
+                            span {
+                                font-weight: 700;
+                            }
+                        }
+
+                        &-content {
+                            display: inline-block;
+                            vertical-align: top;
+                            background-color: @white;
+                            padding: 20px 20px 0;
+
+                            .consent-tab-content {
+                                position: relative;
+
+                                p.title {
+                                    margin-bottom: 20px;
+                                    font-size: @font-size__lg;
+                                }
+
+                                .cookie-toggle-wrapper {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+
+                                    .cookie-toggle {
+                                        position: relative;
+                                        display: inline-block;
+                                        width: 60px;
+                                        height: 34px;
+
+                                        input {
+                                            display: none;
+
+                                            &:checked + .cookie-toggle-slider {
+                                                background-color: var(--doulton-primary);
+                                            }
+
+                                            &:focus + .cookie-toggle-slider {
+                                                box-shadow: 0 0 1px var(--doulton-primary);
+                                            }
+
+                                            &:checked + .cookie-toggle-slider:before {
+                                                -webkit-transform: translateX(26px);
+                                                -ms-transform: translateX(26px);
+                                                transform: translateX(26px);
+                                            }
+                                        }
+
+                                        .cookie-toggle-slider {
+                                            position: absolute;
+                                            cursor: pointer;
+                                            top: 0;
+                                            left: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            -webkit-transition: .4s;
+                                            transition: .4s;
+                                            border-radius: 34px;
+                                            background-color: @slate-600;
+
+                                            &:before {
+                                                position: absolute;
+                                                content: "";
+                                                height: 26px;
+                                                width: 26px;
+                                                left: 4px;
+                                                bottom: 4px;
+                                                background-color: @gray-50;
+                                                -webkit-transition: .4s;
+                                                transition: .4s;
+                                                border-radius: 50%;
+                                            }
+
+                                            &.disabled {
+                                                opacity: 0.5;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .modal-footer {
+                    text-align: right;
+                    background-color: @white;
+                }
+            }
+        }
+    }
+
+    //
+    //  Cookie overview widget
+    //  ---------------------------------------------
+    .cookie-consent-overview {
+        p.title {
+            margin-bottom: 20px;
+        }
+
+        .cookie-group-description {
+            margin-bottom: 30px;
+        }
+    }
+
+
+    //  Cookie preferences button widget
+    //  ---------------------------------------------
+    .btn-cookie-preferences-show {
+        cursor: pointer;
+    }
+
+    //
+    //  Desktop
+    //  _____________________________________________
+
+    @media @media-sm {
+        //
+        //  Notice bar
+        //  ---------------------------------------------
+        .phpro-cookie-notice {
+            .notice-wrapper {
+                flex-direction: row;
+            }
+        }
+
+        //
+        //  Preferences popup
+        //  ---------------------------------------------
+        .modals-wrapper {
+            .modal-popup.cookie-consent-newsletter-modal {
+                .modal-inner-wrap {
+                    background-color: @gray-50;
+
+                    .modal-content {
+                        padding-left: 0;
+                    }
+
+                    .phpro-cookie-consent-modal {
+                        flex-direction: row;
+
+                        .consent-tabs {
+                            width: 33%;
+                            padding-left: 3%;
+                            background-color: @white;
+                            padding-top: 30px;
+
+                            .consent-tab {
+                                width: 80%;
+                                border: 2px solid var(--doulton-primary);
+                                border-radius: 3px;
+                                padding: 5px;
+                                margin-bottom: 20px;
+                                background-color: @white;
+                                box-shadow: none;
+                            }
+
+                            &-content {
+                                background-color: @gray-50;
+                                width: 65%;
+                                padding-top: 30px;
+                                padding-left: 30px;
+                                padding-bottom: 50px;
+                            }
+                        }
+                    }
+
+                    .modal-footer {
+                        height: 0;
+                        text-align: right;
+                        margin-right: 20px;
+
+                        .consent-btn {
+                            margin: -100px 0 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
