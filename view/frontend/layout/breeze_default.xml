@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="cookie_notices" remove="true"/>
+        <referenceBlock name="breeze.js">
+            <arguments>
+                <argument name="bundles" xsi:type="array">
+                    <item name="default" xsi:type="array">
+                        <item name="items" xsi:type="array">
+                            <item name="Phpro_CookieConsent/js/notice" xsi:type="string">Phpro_CookieConsent/js/breeze/notice</item>
+                            <item name="phpprocookie" xsi:type="string">Phpro_CookieConsent::js/breeze/model/cookie.js</item>
+<!--                            <item name="Phpro_CookieConsent/js/modal/preferences" xsi:type="string">Phpro_CookieConsent/js/breeze/modal/preferences</item>-->
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

@@ -48,7 +48,7 @@ $cookieGroups = $viewModel->getCookieGroups();
 </div>
 <script type="text/x-magento-init">
 {
-    "*": {
+    "#modal-consent-content": {
         "Phpro_CookieConsent/js/modal/preferences": {
             "cookie_name": "<?= $viewModel->getCookieName(); ?>",
             "expiration": <?= $viewModel->getExpirationDays(); ?>,
