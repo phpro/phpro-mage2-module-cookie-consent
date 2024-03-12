@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+        <referenceContainer name="after.body.start">
+            <block name="phpro_cookie_gtag"
+                   template="Phpro_CookieConsent::gtag.phtml"
+                   ifconfig="phpro_cookie_consent/gtag/enabled"
+                   before="-"/>
+        </referenceContainer>
+
         <referenceContainer name="before.body.end">
             <block class="Magento\Framework\View\Element\Template"
                    name="phpro_cookie_consent_notice"
