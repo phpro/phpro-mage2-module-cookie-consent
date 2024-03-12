@@ -7,6 +7,9 @@
                 <cookie_name_preferences>cookieConsentPrefs</cookie_name_preferences>
                 <cookie_expiration>182</cookie_expiration>
             </general>
+            <gtag>
+                <enabled>0</enabled>
+            </gtag>
         </phpro_cookie_consent>
     </default>
 </config>

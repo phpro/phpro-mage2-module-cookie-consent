@@ -26,7 +26,7 @@ To delete any group, click the dropdown in the Action column and select Delete.
 
 To create a new group, click Add new Cookie Group.
 
-The **essential**, **analytical** & **marketing** cookie groups are created automatically on installation of the module. 
+The **essential**, **analytical**, **marketing** & **personalization** cookie groups are created automatically on installation of the module. 
 These groups can be altered to your needs.
 
 ### Create
@@ -56,5 +56,8 @@ store views for that specific cookie group. **Only the Name & Description field 
 
 More information for GTM configuration can be found [here](./GTM.md)
 
+### Google Consent
+
+More information for Google consent configuration can be found [here](Consent.md)
 
 

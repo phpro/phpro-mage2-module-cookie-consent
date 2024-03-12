@@ -24,6 +24,14 @@
                     <comment>The value represent the expiration of the cookie in days..</comment>
                 </field>
             </group>
+            <group id="gtag" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Google Consent</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable the module to send the consent to Google using Gtag. It's important to have your Google Tag Manager initiated AFTER the 'phpro_cookie_gtag' block. This feature relies on the cookie groups with the following system names: 'essential', 'analytical', 'marketing' and 'personalization'</comment>
+                </field>
+            </group>
         </section>
     </system>
 </config>

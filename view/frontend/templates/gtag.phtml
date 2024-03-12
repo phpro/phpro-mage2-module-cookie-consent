@@ -1,0 +1,37 @@
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    if (localStorage.getItem('consentMode') === null) {
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'personalization_storage': 'denied',
+            'functionality_storage': 'denied',
+            'security_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+        });
+    } else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+
+    document.addEventListener('consent-changed', function (event) {
+        const consent = event.detail;
+        const consentMode = {
+            'ad_storage': consent.cg_marketing ? 'granted': 'denied',
+            'analytics_storage':  consent.cg_analytical ? 'granted': 'denied',
+            'personalization_storage':  consent.cg_personalization ? 'granted': 'denied',
+            'functionality_storage':  consent.cg_essential ? 'granted': 'denied',
+            'security_storage':  consent.cg_essential ? 'granted': 'denied',
+            'ad_user_data': consent.cg_marketing ? 'granted': 'denied',
+            'ad_personalization':  consent.cg_marketing && consent.cg_personalization ? 'granted': 'denied',
+        };
+
+        gtag('consent', 'update', consentMode);
+        localStorage.setItem('consentMode', JSON.stringify(consentMode));
+    })
+</script>
