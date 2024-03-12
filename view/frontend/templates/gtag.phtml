@@ -19,15 +19,16 @@
         gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
     }
 
-    document.addEventListener('consent-changed', function (consent) {
+    document.addEventListener('consent-changed', function (event) {
+        const consent = event.detail;
         const consentMode = {
-            'ad_storage': consent.marketing ? 'granted': 'denied',
-            'analytics_storage':  consent.analytical ? 'granted': 'denied',
-            'personalization_storage':  consent.personalization ? 'granted': 'denied',
-            'functionality_storage':  consent.essential ? 'granted': 'denied',
-            'security_storage':  consent.essential ? 'granted': 'denied',
-            'ad_user_data': consent.marketing ? 'granted': 'denied',
-            'ad_personalization':  consent.marketing && consent.personalization ? 'granted': 'denied',
+            'ad_storage': consent.cg_marketing ? 'granted': 'denied',
+            'analytics_storage':  consent.cg_analytical ? 'granted': 'denied',
+            'personalization_storage':  consent.cg_personalization ? 'granted': 'denied',
+            'functionality_storage':  consent.cg_essential ? 'granted': 'denied',
+            'security_storage':  consent.cg_essential ? 'granted': 'denied',
+            'ad_user_data': consent.cg_marketing ? 'granted': 'denied',
+            'ad_personalization':  consent.cg_marketing && consent.cg_personalization ? 'granted': 'denied',
         };
 
         gtag('consent', 'update', consentMode);

@@ -24,7 +24,7 @@ define([
             data['expire'] = expiration;
             data['secure'] = secure;
             $.cookie(name, JSON.stringify(data), {expires: this.getExpiration(expiration)});
-            document.dispatchEvent(new Event('consent-changed', data));
+            document.dispatchEvent(new CustomEvent('consent-changed', {detail: data}));
         },
 
         saveSelected: function (name, expiration, secure, systemNames) {
@@ -37,7 +37,7 @@ define([
             data['expire'] = expiration;
             data['secure'] = secure;
             $.cookie(name, JSON.stringify(data), {expires: this.getExpiration(expiration)});
-            document.dispatchEvent(new Event('consent-changed', data));
+            document.dispatchEvent(new CustomEvent('consent-changed', {detail: data}));
         },
 
         closeCookieNotice: function () {
