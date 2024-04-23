@@ -1,3 +1,5 @@
+> We deprecated this module as we can not guarantee GDPR compliance. We advise to look into other solutions like Cookiebot.
+
 ![](https://github.com/phpro/phpro-mage2-module-cookie-consent/workflows/.github/workflows/grumphp.yml/badge.svg)
 
 # Cookie Consent for Magento 2
