@@ -9,7 +9,7 @@ define([
             return (!!$.cookie(name));
         },
 
-        getConsentCookieObject: function(name) {
+        getConsentCookieObject: function (name) {
             return $.cookie(name);
         },
 
@@ -24,6 +24,7 @@ define([
             data['expire'] = expiration;
             data['secure'] = secure;
             $.cookie(name, JSON.stringify(data), {expires: this.getExpiration(expiration)});
+            document.dispatchEvent(new CustomEvent('consent-changed', {detail: data}));
         },
 
         saveSelected: function (name, expiration, secure, systemNames) {
@@ -36,6 +37,7 @@ define([
             data['expire'] = expiration;
             data['secure'] = secure;
             $.cookie(name, JSON.stringify(data), {expires: this.getExpiration(expiration)});
+            document.dispatchEvent(new CustomEvent('consent-changed', {detail: data}));
         },
 
         closeCookieNotice: function () {
@@ -45,7 +47,7 @@ define([
         getExpiration: function (expiration) {
             var today = new Date();
             var expireDate = new Date(today);
-            expireDate.setDate(today.getDate()+expiration);
+            expireDate.setDate(today.getDate() + expiration);
 
             return expireDate;
         }
